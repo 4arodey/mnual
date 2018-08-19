@@ -15,6 +15,7 @@ export class ProfileComponent implements OnInit {
 	id: number = 0;
 	username: string = '';
 	password: string = '';
+	email: string = '';
 
 	constructor(private userService: UserService, private router: Router) {
 	}
@@ -25,6 +26,7 @@ export class ProfileComponent implements OnInit {
 				this.id = data.id;
 				this.username = data.username;
 				this.password = data.password;
+				this.email = data.email;
 			});
 	}
 
