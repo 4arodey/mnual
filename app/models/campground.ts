@@ -8,4 +8,5 @@ export class Campground {
     price: number;
     username: string;
     user_id: number;
+    email: string;
 }
