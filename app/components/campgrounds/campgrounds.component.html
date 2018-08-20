@@ -2,12 +2,12 @@
     <div style="padding-top: 3rem">
         <div class='jumbotron'>
             <h1><i class="fa fa-envira" aria-hidden="true"></i> Welcome to ManualCamp</h1>
-            <p>View our hand-picked campgrounds from all over the world</p>
+            <p>View and create our manuals from all over the world</p>
             <p *ngIf="userdata">
                 <button pButton type="button"
                         class="ui-button-primary"
-                        (click)="addNewCampground()"
-                        label="Add New Campground">
+                        (click)="addNewManual()"
+                        label="Add New Manual">
                 </button>
             </p>
         </div>
@@ -19,7 +19,6 @@
                 <img class="card-img-top" src="{{camp.image}}" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">{{camp.name}}</h5>
-                    <p class="card-text">Price: ${{camp.price}}</p>
                     <button pButton type="button"
                             class="ui-button-info"
                             (click)="moreInfo(camp.id)"

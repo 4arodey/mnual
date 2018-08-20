@@ -70,4 +70,8 @@ export class CampgroundDetailComponent implements OnInit {
 		let tempComment = comment['comment'];
 		this.campDetail.comments.push(tempComment);
 	}
+	
+	listView(x: string) {
+		return x.split(/\d\./).join('</details><details>');
+	  }
 }

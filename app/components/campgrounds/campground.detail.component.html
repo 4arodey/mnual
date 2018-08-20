@@ -9,16 +9,14 @@
         </div>
         <div class='col-md-9' *ngIf="campDetail">
             <div class='thumbnail'>
-                <img class='img-responsive' src={{campDetail?.campground?.image}}>
+                <img width="300px" src={{campDetail?.campground?.image}}>
                 <div class='caption-full'>
-                    <h4 class='pull-right'>${{campDetail?.campground?.price ? campDetail?.campground?.price :
-                        'Unknown'}} </h4>
                     <h4>
                         {{campDetail?.campground?.name}}
                     </h4>
-                    <p>
-                        {{campDetail?.campground?.description}}
-                    </p>
+                    
+                    <div [innerHTML]="listView(campDetail?.campground?.description)"></div>
+                    
                     <p><em> Submitted By {{campDetail?.campground?.username}} </em></p>
                     <div *ngIf="userdata && userdata.id === campDetail?.campground?.user_id">
                         <button pButton type="button"

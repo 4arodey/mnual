@@ -34,7 +34,7 @@ export class CampgroundsComponent implements OnInit {
 		this.router.navigateByUrl('/campground/detail/' + campId);
 	}
 
-	addNewCampground() {
+	addNewManual() {
 		this.router.navigateByUrl('/campground/new');
 	}
 }
