@@ -1,1 +1,1 @@
-# mnual
+# manual
