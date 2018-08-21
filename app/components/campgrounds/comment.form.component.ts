@@ -4,6 +4,7 @@ import { CampgroundService } from '../../services/campgounds.service';
 import { UserService } from '../../services/user.service';
 import { Comment } from '../../models/comment';
 import { NgForm } from '@angular/forms';
+import { CommentStmt } from '../../../../node_modules/@angular/compiler';
 
 /**
  * Oleg Karpach code 3/07/17.
@@ -53,6 +54,9 @@ export class CommentFormComponent implements OnInit {
 		if (this.comment.text) {
 			if (!this.comment.id) {
 				this.campgroundService.createComment(this.comment)
+				// private loadAllUsers() {
+				 	//.subscribe(data => { this.insertedComment.emit() });
+				// 	}
 				// FIXME
 				// .then(data => {
 				// 	this.campgroundService.getComment(data.comment_id)
