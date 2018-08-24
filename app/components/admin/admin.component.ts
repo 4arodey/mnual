@@ -8,12 +8,12 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Campground } from '../../models/campground';
 
 @Component({
-	selector: 'campDetail',
-	templateUrl: './app/components/campgrounds/campground.form.component.html',
-	styleUrls: ['./app/components/campgrounds/campgrounds.component.css']
+	selector: 'app-admin',
+	templateUrl: './app/components/admin/admin.component.html',
+	styleUrls: ['./app/components/admin/admin.component.css']
 })
 
-export class CampgroundFormComponent implements OnInit {
+export class AdminComponent implements OnInit {
 	userdata: any;
 	campground: Campground = new Campground();
 

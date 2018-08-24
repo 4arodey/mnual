@@ -38,14 +38,14 @@ export class CampgroundDetailComponent implements OnInit {
 	}
 
 	doEditCampground(id: number) {
-		this.router.navigateByUrl('/campground/detail/' + id + '/edit');
+		this.router.navigateByUrl('/manual/detail/' + id + '/edit');
 	}
 
 	doDeleteCampground(id: number) {
-		if (this.route.snapshot.url[0].path === 'campground') {
+		if (this.route.snapshot.url[0].path === 'manual') {
 			this.campgroundService.deleteCampground(id).subscribe(data => {
 				if (data.message === 'OK') {
-					this.router.navigate(['/campground']);
+					this.router.navigate(['/manual']);
 				}
 			});
 		}

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from './services/user.service';
 import { NavigationEnd, Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
+import { Cloudinary } from '@cloudinary/angular-5.x';
 
 @Component({
 	selector: 'my-app',

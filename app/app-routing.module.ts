@@ -10,35 +10,40 @@ import { CampgroundFormComponent } from './components/campgrounds/campground.for
 import { UserComponent } from './components/user/user.component';
 import { ProfileComponent } from './components/user/profile.component';
 import { CommentFormComponent } from './components/campgrounds/comment.form.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 const appRoutes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'campground'
+    redirectTo: 'index'
   },
   {
-    path: 'campground',
+    path: 'index',
     component: CampgroundsComponent
   },
   {
-    path: 'campground/detail/:id',
+    path: 'manual/detail/:id',
     component: CampgroundDetailComponent
   },
   {
-    path: 'campground/new',
+    path: 'admin',
+    component: AdminComponent
+  },
+  {
+    path: 'manual/new',
     component: CampgroundFormComponent
   },
   {
-    path: 'campground/detail/:id/edit',
+    path: 'manual/detail/:id/edit',
     component: CampgroundFormComponent
   },
   {
-    path: 'campground/detail/:id/comment/new',
+    path: 'manual/detail/:id/comment/new',
     component: CommentFormComponent
   },
   {
-    path: 'campground/detail/:id/comment/:comment_id/edit',
+    path: 'manual/detail/:id/comment/:comment_id/edit',
     component: CommentFormComponent
   },
   {

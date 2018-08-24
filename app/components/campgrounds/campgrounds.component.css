@@ -19,6 +19,47 @@
     padding: 2rem;
 }
 
+.jumbotron {
+    background-color: rgb(190, 255, 192);
+    background-image: url(background.png);
+}
+
+.card {
+    height: 100px;
+}
+
+
+
+#delete {
+    display: inline;
+}
+
+:host-context(.light-theme) .campground-item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+:host-context(.light-theme) .thumbnail {
+    border: lightgray 0.05rem solid;
+    border-radius: 0.3rem;
+    position: relative;
+    padding: 0.4rem;
+    margin-bottom: 1.8rem;
+}
+
+:host-context(.light-theme) .thumbnail img {
+    width: 100%;
+}
+
+:host-context(.light-theme) .thumbnail .caption-full {
+    padding: 2rem;
+}
+
+:host-context(.light-theme) .jumbotron {
+    background-image: url(background.png);
+    
+}
+
 #delete {
     display: inline;
 }

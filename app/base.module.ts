@@ -1,7 +1,3 @@
-/**
- * Oleg Code 07-02-2017.
- */
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +18,8 @@ import { CampgroundsComponent } from './components/campgrounds/campgrounds.compo
 import { CampgroundDetailComponent } from './components/campgrounds/campground.detail.component';
 import { CampgroundFormComponent } from './components/campgrounds/campground.form.component';
 import { CommentFormComponent } from './components/campgrounds/comment.form.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { SearchComponent } from './components/campgrounds/search.component';
 
 @NgModule({
 	imports: [
@@ -40,7 +38,9 @@ import { CommentFormComponent } from './components/campgrounds/comment.form.comp
 		CampgroundFormComponent,
 		CommentFormComponent,
 		UserComponent,
-		ProfileComponent
+		ProfileComponent,
+		AdminComponent,
+		SearchComponent
 	],
 	providers: [
 		ApiService,

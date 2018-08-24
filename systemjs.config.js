@@ -7,14 +7,24 @@ var isPublic = typeof window != "undefined";
 		'@angular': (isPublic) ? '@angular' : 'node_modules/@angular',
 		'lodash': 'http://localhost:8080/libs/lodash/lodash.min.js',
 		'primeng': 'http://localhost:8080/libs/primeng/',
-		'rxjs': (isPublic) ? 'rxjs' : 'node_modules/rxjs'
+		'rxjs': (isPublic) ? 'rxjs' : 'node_modules/rxjs',
+		'@cloudinary/angular': 'npm:@cloudinary/angular-5.x',
+      'cloudinary-core': 'npm:cloudinary-core'
 	};
 	// packages tells the System loader how to load when no filename and/or no extension
 	var packages = {
 		'app': { main: 'main.js', defaultExtension: 'js' },
 		'rxjs': { defaultExtension: 'js' },
 		'lodash': { defaultExtension: 'js' },
-		'primeng': { defaultExtension: 'js' }
+		'primeng': { defaultExtension: 'js' },
+		"@cloudinary/angular": {
+			main: 'index.js',
+			defaultExtension: 'js'
+		  },
+		  "cloudinary-core": {
+			main: 'cloudinary-jquery-file-upload.js',
+			defaultExtension: 'js'
+		  }
 	};
 	var ngPackageNames = [
 		'animations',

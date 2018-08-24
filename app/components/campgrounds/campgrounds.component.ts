@@ -1,6 +1,3 @@
-/**
- * Oleg Code 07-02-2017.
- */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -17,6 +14,7 @@ import { Campground } from '../../models/campground';
 export class CampgroundsComponent implements OnInit {
 	camps: Campground[];
 	userdata: any;
+	theme = '';
 
 	constructor(private router: Router, private campService: CampgroundService, private userService: UserService) {
 	}
@@ -31,10 +29,10 @@ export class CampgroundsComponent implements OnInit {
 	}
 
 	moreInfo(campId: number) {
-		this.router.navigateByUrl('/campground/detail/' + campId);
+		this.router.navigateByUrl('/manual/detail/' + campId);
 	}
 
 	addNewManual() {
-		this.router.navigateByUrl('/campground/new');
+		this.router.navigateByUrl('/manual/new');
 	}
 }
