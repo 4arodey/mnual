@@ -35,27 +35,4 @@ export class AdminComponent implements OnInit {
 				.subscribe(data => this.campground = data.campground);
 		}
 	}
-
-	doSubmit() {
-		if (this.route.snapshot.url[0].path === 'manual') {
-			if (this.route.snapshot.url[1].path === 'new') {
-				this.campground.user_id = this.userdata.id;
-				this.campground.username = this.userdata.username;
-
-				this.campgroundService.createCampground(this.campground)
-					.subscribe(data => {
-						if (data.message === 'OK') {
-							this.router.navigate(['/manual/detail', data.campground_id]);
-						}
-					});
-			} else if (this.route.snapshot.url[1].path !== 'new' && this.route.snapshot.url[3].path === 'edit') {
-				this.campgroundService.editCampground(this.campground)
-					.subscribe(data => {
-						if (data.message === 'OK') {
-							this.router.navigate(['/manual/detail', this.campground.id]);
-						}
-					});
-			}
-		}
-	}
 }
