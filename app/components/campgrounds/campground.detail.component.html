@@ -14,7 +14,6 @@
                     <h4>
                         {{campDetail?.campground?.name}}
                     </h4>
-                    
                     <div [innerHTML]="listView(campDetail?.campground?.description)"></div>
                     
                     <p><em> Submitted By {{campDetail?.campground?.username}} </em></p>
@@ -53,7 +52,7 @@
                         <p>
                             {{comment.text}}
                         </p>
-                        <div *ngIf="userdata && comment.user_id === userdata.id">
+                        <div *ngIf="userdata && comment.user_id === userdata.id || role === 2">
                             <button pButton type="button"
                                     class="ui-button-warning"
                                     (click)="doEditComment(comment)"
@@ -68,6 +67,11 @@
                     </div>
                 </div>
             </div>
+            <button pButton type="button"
+                                    class='ui-button-danger'
+                                    (click)="doGetComment(comment?.id)"
+                                    label="update">
+                            </button>
             <a routerLink="/">Go Back</a>
         </div>
     </div>

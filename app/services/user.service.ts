@@ -1,7 +1,3 @@
-/**
- * Oleg Karpach code 7/06/17.
- */
-
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';

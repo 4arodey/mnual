@@ -1,5 +1,3 @@
-
-
 export class Campground {
     id: number;
     name: string;
@@ -9,4 +7,5 @@ export class Campground {
     username: string;
     user_id: number;
     email: string;
+    medals: string;
 }

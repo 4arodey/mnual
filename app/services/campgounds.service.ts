@@ -1,7 +1,3 @@
-/**
- * Oleg Code 07-02-2017.
- */
-
 import { Injectable } from '@angular/core';
 import { Campground } from '../models/campground';
 import { Comment } from '../models/comment';

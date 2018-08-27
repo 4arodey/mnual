@@ -15,7 +15,8 @@ import { Campground } from '../../models/campground';
 
 export class AdminComponent implements OnInit {
 	userdata: any;
-	campground: Campground = new Campground();
+	admin: Campground = new Campground();
+	role: Comment = new Comment();
 
 	constructor(private campgroundService: CampgroundService,
 	            private userService: UserService,
@@ -32,7 +33,7 @@ export class AdminComponent implements OnInit {
 
 		if (this.route.snapshot.url[1].path !== 'new' && this.route.snapshot.url[3].path === 'edit') {
 			this.campgroundService.getCampground(Number(this.route.snapshot.url[2].path))
-				.subscribe(data => this.campground = data.campground);
+				.subscribe(data => this.admin = data.campground);
 		}
 	}
 }

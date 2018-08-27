@@ -1,6 +1,4 @@
-/**
- * Oleg Karpach code 2/07/17.
- */
+
 import { Component, OnInit } from '@angular/core';
 import { CampgroundService } from '../../services/campgounds.service';
 import { UserService } from '../../services/user.service';

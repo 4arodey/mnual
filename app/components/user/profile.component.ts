@@ -1,6 +1,4 @@
-/**
- * Oleg Karpach code 29/06/17.
- */
+
 
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
@@ -16,6 +14,8 @@ export class ProfileComponent implements OnInit {
 	username: string = '';
 	password: string = '';
 	email: string = '';
+	medals: string = '';
+	role: number = 0;
 
 	constructor(private userService: UserService, private router: Router) {
 	}
@@ -27,10 +27,25 @@ export class ProfileComponent implements OnInit {
 				this.username = data.username;
 				this.password = data.password;
 				this.email = data.email;
+				this.medals = data.medals;
+				this.role = data.role;
 			});
 	}
 
 	doLogout() {
 		this.router.navigateByUrl('/logout');
 	}
+
+	inputRole(x: number) {
+		return (x == 1) ? "Admin" : "User";
+	}
+
+	imputMedals(x: string) {
+		return x.split('');
+	}
+
+	// listView(x: string) {
+	// 	return x.split(/\d\./).join('</details><details>');
+	// }
+
 }

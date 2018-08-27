@@ -1,7 +1,3 @@
-/**
- * Oleg Code 07-02-2017.
- */
-
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './services/user.service';
 import { NavigationEnd, Router } from '@angular/router';

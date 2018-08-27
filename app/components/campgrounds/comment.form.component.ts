@@ -6,9 +6,7 @@ import { Comment } from '../../models/comment';
 import { NgForm } from '@angular/forms';
 import { CommentStmt } from '../../../../node_modules/@angular/compiler';
 
-/**
- * Oleg Karpach code 3/07/17.
- */
+
 
 @Component({
 	selector: 'app-comment',

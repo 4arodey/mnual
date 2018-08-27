@@ -28,7 +28,7 @@ import { SearchComponent } from './components/campgrounds/search.component';
 		HttpModule,
 		FormsModule,
 		AppRoutingModule,
-		// Primeng Module
+		//  Module
 		ButtonModule,
 	],
 	declarations: [
